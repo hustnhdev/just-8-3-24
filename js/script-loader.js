@@ -20,7 +20,7 @@
 
             // Redirect to a new page after the transition effect completes
             setTimeout(function () {
-                window.location.href = 'index.html'; // Replace with the desired URL
+                window.location.href = 'main.html'; // Replace with the desired URL
             }, 1000); // Adjust the time (in milliseconds) based on your transition duration
         } else {
             per = per + 4;
