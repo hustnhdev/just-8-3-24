@@ -1,0 +1,157 @@
+﻿@import url("https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f1c1cf; /* Updated background color */
+    color: #333; /* Change to your desired text color */
+    align-content: center;
+    text-align: center;
+    padding: 0px;
+    overflow: auto;
+}
+
+#game-board {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.background img{
+    display: block;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    z-index: 0;
+}
+
+.wood-board img{
+    display: block;
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    left: 35%;
+    z-index: 1;
+}
+
+.start-message {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    color: #4b2d13;
+}
+
+.flash-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white overlay */
+    z-index: 2; /* Ensure it's above other elements */
+    animation: flashAnimation 2s ease; /* Adjust the animation duration and easing as needed */
+}
+
+@keyframes flashAnimation {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#image-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    overflow: auto;
+}
+
+.image-wrapper {
+    position: relative;
+    flex: 0 0 auto;
+    text-align: center;
+    margin: 5px;
+    opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+    transition: opacity 1s ease;
+}
+.visible {
+    opacity: 1; /* Set opacity to 1 to make the element visible */
+}
+.hidden {
+    display: none;
+}
+
+.image-title {
+    margin-top: 10px; /* Adjust the margin as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.popup-container {
+    display: none; /* Initially hide the popup */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5bfbf;
+    padding: 20px;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+    transition: opacity 2s ease;
+}
+
+/* Popup Content Styles */
+.popup {
+    text-align: center;
+}
+
+    .popup img {
+        max-width: 100%;
+        height: auto;
+    }
+
+/* Add any additional styles as needed */
+.popup-container.visible {
+    opacity: 1; /* Set opacity to 1 to make the element visible */
+    display: block;
+}
+
+/* Additional styling for the bold text */
+.popup p:last-child {
+    font-weight: bold;
+}
+
+.popup p, .popup img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Show each paragraph and image with a staggered animation */
+.popup-container.visible .popup p.visible,
+.popup-container.visible .popup img.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
