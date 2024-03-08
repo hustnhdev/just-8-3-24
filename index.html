@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>8*3=24</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="game-board">
+        <div class="background">
+            <img src="src/background.jpg" />
+        </div>
+        <div class="wood-board">
+            <img src="src/wood-board.png" />
+        </div>
+        <div class="start-message" onclick="startGame()">
+            Chạm để bắt đầu
+        </div>
+
+        <div class="image-container" id="image-container">
+            <div class="image-wrapper">
+                <img src="src/frame1.jpg" alt="Image 1" class="hidden" style="width: 300px; height: auto; padding-top: 5px;">
+                <div class="image-title hidden">Để tớ đưa cậu đến cả rừng hoa</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="src/frame2.jpg" alt="Image 2" class="hidden" style="width: 300px; height: auto; padding-top: 5px; ">
+                <div class="image-title hidden">Nơi cậu có thể vui vẻ</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="src/frame3.jpg" alt="Image 3" class="hidden" style="width: 300px; height: auto; padding-top: 5px; ">
+                <div class="image-title hidden">Thỏa sức hái hoa</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="src/frame4.jpg" alt="Image 4" class="hidden" style="width: 300px; height: auto; padding-top: 5px; ">
+                <div class="image-title hidden">Cậu là bông hoa đẹp nhất</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="src/frame5.jpg" alt="Image 5" class="hidden" style="width: 300px; height: auto; padding-top: 0px;">
+                <div class="image-title hidden">Và tớ sẽ luôn ở bên cậu</div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <p>Tớ nhớ là cậu thích ôm...</p>
+            <br />
+            <p>...cậu không chê thì tớ có thể ôm cậu mỗi ngày luôn á...</p>
+            <br />
+            <img src="src/hug1.jpg" style="width: 200px; height: auto;"/>
+            <p>...ờm không phải với cái mặt thái độ như này...</p>
+            <img src="src/hug2.jpg" style="width: 200px; height: auto;"/>
+            <p>... mà là thái độ này cerrr!!!</p>
+            <br/>
+            <p style="font-weight: bold;">(8+1)/3 rồi, chúc cậu lúc nào cũng vui vẻ và hạnh phúc nhá!!!</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
